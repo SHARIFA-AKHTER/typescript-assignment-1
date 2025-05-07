@@ -1,7 +1,20 @@
 //Problem-1-solution
 
-import { formatString } from "./solutions";
+import { filterByRating } from "./solutions";
 
-console.log(formatString("Hello"));
-console.log(formatString("Hello",true));
-console.log(formatString("Hello", false));
+// import { formatString } from "./solutions";
+
+// console.log(formatString("Hello"));
+// console.log(formatString("Hello",true));
+// console.log(formatString("Hello", false));
+
+//Problem-2-solution
+
+const books = [
+    { title: "Book A", rating: 4.5 },
+    { title: "Book B", rating: 3.2 },
+    { title: "Book C", rating: 5.0 }
+  ];
+  
+  const filter= filterByRating(books); 
+  console.log(filter);
