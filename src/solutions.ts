@@ -11,3 +11,13 @@ export function filterByRating(
 ): { title: string; rating: number }[] {
     return items.filter(item => item.rating>=4);
 }
+
+//Problem-3-solution
+export function concatenateArrays<T>(...arrays: T[][]): T[]{
+    return arrays.flat()
+}
+export function concatenateArraysReduce<T>(...arrays: T[][]): T[]{
+    return arrays.reduce((acc, curr)=> acc.concat(curr),[])
+}
+
+
