@@ -1,5 +1,4 @@
 //Solution for Problem 1
-import resolve from './../node_modules/@jridgewell/resolve-uri/dist/types/resolve-uri.d';
  function formatString(input:string, toUpper: boolean = true): string{
     return toUpper ? input.toUpperCase() : input.toLowerCase();
 }
