@@ -43,7 +43,10 @@ class Car extends Vehicle{
         return `Model: ${this.model}`
     }
 }
-const myCar = new Car("Toyota", 2020, "Corolla");
-console.log(myCar.getInfo());
-console.log(myCar.getModel());
+
+//Problem-5-solution
+
+function processValue(value: string | number): number{
+    return typeof value === "string" ? value.length : value * 2;
+}
 
