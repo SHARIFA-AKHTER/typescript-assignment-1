@@ -1,21 +1,22 @@
-//Problem-1-solution
+//Solution for Problem 1
+import resolve from './../node_modules/@jridgewell/resolve-uri/dist/types/resolve-uri.d';
  function formatString(input:string, toUpper: boolean = true): string{
     return toUpper ? input.toUpperCase() : input.toLowerCase();
 }
 
-//Problem-2-solution
+//Solution for Problem 2
  function filterByRating(
     items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
     return items.filter(item => item.rating>=4);
 }
 
-//Problem-3-solution
+//Solution for Problem 3
  function concatenateArrays<T>(...arrays: T[][]): T[]{
     return arrays.flat()
 }
 
-//Problem-4-solution
+//Solution for Problem 4
 
 class Vehicle {
    private make: string;
@@ -44,13 +45,13 @@ class Car extends Vehicle{
     }
 }
 
-//Problem-5-solution
+//Solution for Problem 5
 
 function processValue(value: string | number): number{
     return typeof value === "string" ? value.length : value * 2;
 }
 
-//Problem-6-solution
+//Solution for Problem 6
 
 interface Product {
     name: string;
@@ -63,7 +64,7 @@ interface Product {
 
   }
   
-  //Problem-7-solution
+  //Solution for Problem 7
   enum Day {
     Monday,
     Tuesday,
@@ -77,5 +78,16 @@ interface Product {
   function getDayType(day: Day): string{
     return day >= Day.Monday && day <= Day.Friday ? "Weekday" : "Weekend";
   }
-  console.log(getDayType(Day.Monday));
-  console.log(getDayType(Day.Sunday));
+
+  //Solution for Problem 8
+
+  async function squareAsync(n: number): Promise<number>{
+    if(n < 0){
+        throw new Error("Negative number not allowed");
+    }
+    return new Promise((resolve)=>{
+        setTimeout(() => resolve(n*n), 1000);
+    });
+  }
+  
+  
