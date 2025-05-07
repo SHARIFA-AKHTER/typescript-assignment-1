@@ -50,3 +50,16 @@ function processValue(value: string | number): number{
     return typeof value === "string" ? value.length : value * 2;
 }
 
+//Problem-6-solution
+
+interface Product {
+    name: string;
+    price: number;
+  }
+  
+  function getMostExpensiveProduct(products: Product[]): Product | null{
+    if (products.length === 0) return null;
+    return products.reduce((prev,current)=> (current.price ? current: prev));
+
+  }
+  
