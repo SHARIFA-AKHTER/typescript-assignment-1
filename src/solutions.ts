@@ -1,23 +1,49 @@
 //Problem-1-solution
-
-export function formatString(input:string, toUpper: boolean = true): string{
+ function formatString(input:string, toUpper: boolean = true): string{
     return toUpper ? input.toUpperCase() : input.toLowerCase();
 }
 
 //Problem-2-solution
-
-export function filterByRating(
+ function filterByRating(
     items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
     return items.filter(item => item.rating>=4);
 }
 
 //Problem-3-solution
-export function concatenateArrays<T>(...arrays: T[][]): T[]{
+ function concatenateArrays<T>(...arrays: T[][]): T[]{
     return arrays.flat()
 }
-export function concatenateArraysReduce<T>(...arrays: T[][]): T[]{
-    return arrays.reduce((acc, curr)=> acc.concat(curr),[])
+
+//Problem-4-solution
+
+class Vehicle {
+   private make: string;
+   private year: number;
+
+   constructor(make: string, year: number){
+    this.make = make;
+    this.year = year;
+   }
+
+  public getInfo(): string{
+    return `Make: ${this.make}, Year: ${this.year}`
+  }
 }
 
+class Car extends Vehicle{
+    private model: string;
+
+    constructor(make: string, year: number, model: string){
+        super (make,year);
+        this.model = model;
+    }
+
+    public getModel():string{
+        return `Model: ${this.model}`
+    }
+}
+const myCar = new Car("Toyota", 2020, "Corolla");
+console.log(myCar.getInfo());
+console.log(myCar.getModel());
 
